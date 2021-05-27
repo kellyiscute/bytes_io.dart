@@ -1,4 +1,7 @@
-A library for Dart developers.
+# bytes_io
+
+A python-like bytes_io implementation for dart
+A powerful helper for processing raw binary data
 
 ## Usage
 
@@ -8,12 +11,9 @@ A simple usage example:
 import 'package:bytes_io/bytes_io.dart';
 
 main() {
-  var awesome = new Awesome();
+  var reader = BytesReader([your_byte_buffer]);
+  reader.readByte();
 }
 ```
 
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+## docs are in doc comments!
