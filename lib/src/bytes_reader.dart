@@ -48,14 +48,12 @@ class BytesReader {
   /// read bytes until a specific byte being seen
   /// the specific byte is not included
   Uint8List readUntil(int byte) {
-    BytesBuilder builder = BytesBuilder();
-    int b;
-    do {
-      b = data[_currentPosition + 1];
-      builder.addByte(b);
+    int startPosition = _currentPosition;
+    while (_currentPosition < data.lengthInBytes &&
+        data[_currentPosition] != byte) {
       _currentPosition++;
-    } while (b != byte && _currentPosition < data.lengthInBytes);
-    return builder.toBytes();
+    }
+    return Uint8List.sublistView(data, startPosition, _currentPosition);
   }
 
   /// read int out of bytes
