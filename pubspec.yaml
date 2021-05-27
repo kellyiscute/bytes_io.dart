@@ -1,6 +1,6 @@
 name: bytes_io
 description: a python-like bytes_io implementation for dart
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/guo40020/bytes_io.dart
 
 environment:
